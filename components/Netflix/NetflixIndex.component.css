@@ -1,0 +1,11 @@
+.backImg{
+    background-image: url('../../../public/backgroundImg/netflixImg.png');
+    width: 100%;
+    height: 700px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.backColor{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 700px;
+    width: 100%;
+}

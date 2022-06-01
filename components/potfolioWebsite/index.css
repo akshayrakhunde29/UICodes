@@ -1,0 +1,31 @@
+header{
+    background-image: url('../../../public/backgroundImg/potfolioImg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 550px;
+}
+header ol li{
+    margin-right: 1em;
+}
+header ol{
+    font-size: 1.3em;
+}
+.skillImgages img{
+    width: 20%;
+    height: 180px;
+}
+dt>span{
+    font-size: 1.3em;
+    color: red;
+}
+footer div ol li a{
+    color: white;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 0.2em 0.4em;
+    border-radius: 1em;
+}
+footer div ol li span{
+    font-size: 1.3em;
+    padding-bottom: 5%;
+}
