@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Naresh-IT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            .icons{
+                background-color: black;
+                color: white;
+                border-radius:10px;
+                font-size: 20px;
+            }
+            .icons:hover{
+                background-color: white;
+                color: black;
+                font-size: 23px;
+            }
+            
+        </style>
+    </head>
+    <body style="background-color: whitesmoke;">
+        <div style="height: 100px; background-color:#17a2b8;">
+            <!-- <div class="d-flex justify-content-between">
+                <div>
+                    <img src="../images/nareshitlogo.png" class="p-1" height="100px" width="250px">
+                </div>
+                <div class="p-1">
+                    <h4>Follow us on Social media:</h4>
+                    <ul style="list-style: none; display: flex;" class="pt-2">
+                        <li><a href="https://www.facebook.com/nareshit/"><span class="bi bi-facebook p-2 me-2 icons"></span></a></li>
+                        <li><a href="https://www.instagram.com/nareshitech/?hl=en"><span class="bi bi-instagram p-2 me-2 icons" ></span></a></li>
+                        <li><a href="https://twitter.com/nareshitech"><span class="bi bi-twitter p-2 me-2 icons"></span></a></li>
+                        <li><a href="https://in.linkedin.com/company/naresh-i-technologies"><span class="bi bi-linkedin p-2 me-2 icons"></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC4o8Fdpv3g_AjgShAeivqpA"><span class="bi bi-youtube p-2 me-2 icons"></span></a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-flex justify-content-between" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link"><span class="bi bi-house-fill">Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link"><span class="bi bi-question-circle-fill">About</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="service.html" class="nav-link"><span class="bi bi-tools">Service</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contactus.html" class="nav-link"><span class="bi bi-phone-fill">Contact-us</span></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <div class="dropstart">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-target="#menu" data-bs-toggle="dropdown">Login</a>
+                                <div class="dropdown-menu collapse" id="menu">
+                                    <div class="dropdown-item">
+                                        <a href="signin.html" class="nav-link text-dark"><span class="bi bi-box-arrow-in-right">Sign-in</span></a>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="signup.html" class="nav-link text-dark"><span class="bi bi-person-circle">Sign-up</span></a>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="changepassword.html" class="nav-link text-dark"><span class="bi bi-key-fill">Change Password</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+            <div>
+                <div class="container-fluid d-flex justify-content-center mt-5">
+                    <form class="collapse show border border-2 border-dark rounded-3 bg-white m-4 p-4" style="width:400px;">
+                            <h4 class="text-center">Sign-up</h4>
+                        <div>
+                            <label for="first-name" class="form-label">Firstname</label>
+                            <input type="text" name="firstname" id="first-name" class="form-control" required autofocus placeholder="First name"> 
+                        </div>
+                        <div class="mt-4">
+                            <label for="last-name" class="form-label">Lastname</label>
+                            <input type="text" name="lastname" id="last-name" class="form-control" required placeholder="Last-name">
+                        </div>
+                        <div class="mt-4">
+                            <label for="mobile-num" class="form-label">Mobile Number</label>
+                            <div class="input-group">
+                                <div>
+                                    <select class="input-group-text form-select pe-4">
+                                        <option>&nbsp;</option>
+                                        <option>+91</option>
+                                        <option>+1</option>
+                                        <option>+93</option>
+                                        <option>+244</option>
+                                        <option>+356</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input type="text" size="25" id="mobile-num" name="mobilenum" class="form-control ms-2" placeholder="Mobile number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label for="mailid" class="form-label">Email-Address</label>
+                            <input type="email" id="mailid" name="email" class="form-control" placeholder="email addres">
+                        </div>
+                        <div class="mt-4">
+                            <label for="gen-der" class="form-label">Gender:</label>
+                            <span class="ms-3"><input type="radio" class="form-switch" name="gender" id="gen-der">Male</span>
+                            <span class="ms-2"><input type="radio" class="form-switch" name="gender">Female</span>
+                        </div>
+                        <div>
+                            <label for="upload">Upload photo</label>
+                            <input type="file" id="upload" name="upload" class="mt-2">
+                        </div>
+                        <div class="mt-4">
+                            <label for="enter-password" class="form-label">Enter Password</label>
+                            <input type="password" name="enterpassword" id="enter-password" class="form-control" pattern="[A-Z a-z 0-9]{6,8}" placeholder="please enter min of 6 chars ">
+                        </div>
+                        <div class="mt-4">
+                            <label for="confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" name="confirmpassword" id="confirm-password" class="form-control" pattern="[A-Z]{6,8}">
+                        </div>
+                        
+                        <div class="mt-4">
+                            <button class="btn btn-success w-100">Sign-up</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex justify-content-evenly p-4" style="background-color:#232f3e; color: white;">
+                <div style="width: 300px;">
+                    <h5 class="mt-4">ABOUT NARESH I TECHNOLOGIES</h5>
+                    <p style="margin-top: 50px;">Training Institute Overview Naresh i Technologies Naresh i Technologies (Pronounced: NareshIT) is a leading software training institute providing Software Training, Project Guidance, IT Consulting and Technology Workshops. Using our enhanced global software training delivery methodology,</p>
+                </div>
+                <div style="width: 300px;">
+                    <h5 class="mt-4">INTERVIEW QUESTIONS</h5>
+                    <ul style="margin-top: 70px;">
+                        <li><a href="#" class="text-white" style="text-decoration: none;">DevOps Interview Questions</a></li>
+                        <li><a href="#" class="text-white" style="text-decoration: none;">AngularJS Interview Questions</a></li>
+                        <li><a href="#" class="text-white" style="text-decoration: none;">Java Interview Questions</a></li>
+                        <li><a href="#" class="text-white" style="text-decoration: none;">HTML Interview Questions</a></li>
+                        <li><a href="#" class="text-white" style="text-decoration: none;">JavaScript Interview Questions</a></li>
+                        <li><a href="#" class="text-white" style="text-decoration: none;">Advanced Java Interview Questions</a></li>
+                        <li><a href="#" class="text-white" style="text-decoration: none;">HTML5 and CSS Interview Questions</a></li>
+                    </ul>
+                </div>
+                <div style="width: 300px;">
+                    <h5 class="mt-4">HYDERABAD MAIN CAMPUS</h5>
+                    <p style="margin-top: 70px;">Add: 2nd Floor, Durga Bhavani Plaza,<br>
+                    Ameerpet, Hyderabad<br>
+                    Ph : 040-2374 6666 / 2373 4842<br>
+                    Email : support@nareshit.com<br>
+
+                    For Online Training:<br>
+
+                    Call/Whatsapp:  +91-8179191999<br>
+                    Email: onlinetraining@nareshit.com
+                    </p>
+                </div>
+                <div style="width: 300px;">
+                    <h5 class="mt-4">JOIN OUR TELEGRAM – GET UPDATES</h5>
+                    <ul style="margin-top: 55px;">
+                        <li>NareshIT Official Channel   </li>
+                        <li>Python | JAVA | AWS | DevOps |  Data Science</li>
+                    </ul>
+                </div>
+            </div>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
