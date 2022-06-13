@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="../src/css/product.css">
+<title>Sign In</title>
+<div class="mt-5 mb-5" id="signInPage">
+    <div class="rounded text-center p-2 position-absolute end-0 border border-dark bg-danger text-white invalidSignIn">invalid password</div>
+    <div class="signInPageMedia d-flex justify-content-center mt-4 mb-4 w-50 p-4 border border-dark bg-white container-fluid">
+       <div>
+        <form>
+            <h5><span style="cursor: pointer;">Sign In</span> | <span onclick="registration('registretion')" style="cursor: pointer;">Sign Up</span></h5>
+            <div>
+                <div class="input-group mt-3">
+                    <span class="bi bi-person-fill input-group-text"></span>
+                    <input class="username form-control p-2" id="userName" type="text" name="username" placeholder="Username or Email Address">
+                </div>
+            </div>
+            <div>
+                <div class="input-group mt-4">
+                    <span class="bi bi-key-fill input-group-text"></span>
+                    <input class="username showtext form-control p-2" id="userPassword" type="password" name="password" placeholder="Enter Your Password">
+                    <span id="clickEye" class="bi bi-eye-fill input-group-text bg-white"></span>
+                </div>
+            </div>
+            <div class="mt-3">By continuing you agree to i-Shop <span class="text-primary" onclick="conditionOfUses()" style="cursor: pointer;">Condition of Use</span> and 
+                <div class="text-primary"><span onclick="privacyPolicy()" style="cursor: pointer;">Privacy Notic</span><span style="cursor: pointer;"> - Need Help?</span></div>
+            </div>
+        </form>
+        <button class="btn btn-primary w-100 mt-2 p-2" id="signInbtn">Sign In</button>
+        <div class="mt-2">Forgot Password? <span class="text-primary" onclick="forgotPass()"  style="cursor: pointer;">Click Hear</span></div>
+       </div>
+    </div>
+</div>
+<script src="../src/js/index.js"></script>

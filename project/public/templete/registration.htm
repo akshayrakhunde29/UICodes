@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="../src/css/product.css">
+<div class="pb-5">
+    <div class="signInPageMedia bg-light mt-5 d-flex w-50 justify-content-around border border-dark container-fluid p-3 mainContainer">
+        <div class="text-center getStart">
+            <div class="mb-3">Get Started</div>
+            <div><a href="https://google.com" target="_blank"><button class="btn btn-outline-success mb-2">Sign in with Google+</button></a></div>
+            <div><a href="https://www.facebook.com/login/" target="_blank"><button class="btn btn-outline-success">Sign in with Facebook</button></a></div>
+        </div>
+        <div>
+            <div class="text-center fs-4">Register</div>
+            <form>
+                <div>
+                    <label for="userName" class="mt-1 mb-1 font-own">UserName</label>
+                    <div class="input-group">
+                        <span class="bi bi-person-fill inputIcon input-group-text"></span>
+                        <input id="userName" class="form-control" type="text" name="userName" placeholder="Enter your name">
+                    </div>
+                    <div class="registration-error" id="mandetoryUserName">username mandetory</div>
+                </div>
+    
+                <div>
+                    <label for="email" class="font-own mb-1 mt-1">Email ID</label>
+                    <div class="input-group">
+                        <span class="bi bi-envelope-fill inputIcon input-group-text"></span>
+                        <input id="emailId" class="form-control" type="email" name="email" placeholder="Enter your email ID">
+                    </div>
+                    <div class="registration-error" id="mandetoryEmail">email Mandetory</div>
+                </div>
+    
+                <div>
+                    <label for="password" class="mb-1 mt-1 font-own">Password</label>
+                    <div class="input-group">
+                        <span class="bi bi-key-fill inputIcon input-group-text"></span>
+                        <input id="userPass" class="form-control showtext" type="password" name="password" placeholder="Enter your password">
+                        <span id="clickEye" class="bi bi-eye-fill input-group-text bg-white"></span>
+                    </div>
+                    <div class="registration-error" id="mandetoryPass">password mandetory</div>
+                </div>
+    
+                <div>
+                    <label for="password" class="mb-1 mt-1 font-own">Confirm Password</label>
+                    <div class="input-group">
+                        <span class="bi bi-key-fill inputIcon input-group-text"></span>
+                        <input id="confirmPass" class="form-control showConfirmPass" type="password" name="password" placeholder="confirm password">
+                        <span id="clickEyeConfirmPass" class="bi bi-eye-fill input-group-text bg-white"></span>
+                    </div>
+                    <div class="registration-error" id="mandetoryPassConfirm"></div>
+                </div>
+            </form>
+            <button class="btn btn-primary w-100 mt-3" id="registerUser">Register</button>
+            <div class="mt-2 font-own">Already a Member? Go to <span class="ms-4 text-primary" onclick="signIn()"  style="cursor: pointer;">Sign In</span></div>
+        </div>
+    </div>  
+</div>
+<script src="../src/js/index.js"></script>

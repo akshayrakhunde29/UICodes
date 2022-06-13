@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#headerLogin{
+    background-image: linear-gradient(to left, rgba(29, 25, 25, 0.894), rgba(51, 49, 49, 0.856), rgb(239, 233, 233));
+    color: white;
+}
+#headerProduct{
+    display: none;
+}
+#footerLogin{
+    background-color: rgba(0, 0, 0, 0.772);
+    color: rgba(255, 255, 255, 0.902);
+    font-size: 1em;
+}
+#footerProduct{
+    background-color: rgba(0, 0, 0, 0.923);
+    color: rgba(255, 255, 255, 0.902);
+    font-size: 1em;
+    display: none;  
+}
+#signInPage{
+    font-size: 1.1em;
+}
+
+/* sign In page */
+.invalidSignIn{
+    display: none;
+}
+
+/* registration page*/
+.getStart{
+    margin-top: 12em;
+    font-size: 1.2em;
+}
+.font-own{
+    font-size: 1.1em;
+}
+.registration-error{
+    display: none;
+    color: red;
+    text-align: right;
+}
+#passShowAfterEmail{
+    display: none;
+}
+
+/* forgot page */
+.forgotBlock{
+    width: 35%;
+}

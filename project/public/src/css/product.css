@@ -1,0 +1,179 @@
+.laptopImg{
+    height: 16rem;
+}
+.Laptoptitle{
+    height: 4rem;
+}
+.description{
+    height: 8rem;
+}
+.heartIcon{
+    color: whitesmoke;
+    font-size: 20px;
+}
+.heartIcon:hover{
+    color: red;
+}
+.addToCard:hover{
+    background-color: white !important; 
+    border: 1px solid !important;
+    color: black !important;
+}
+.superLaptopHeading{
+    background-image: url("../../assets/superLaptopBackground.jpg");
+    color: white;
+}
+.cardContainer{
+    width: 23.3% !important;
+}
+.cardImg:hover{
+    width: 107%;
+    padding: 10px;
+}
+.signInPageMedia{
+    border-radius: 20px;
+}
+
+#products{
+   display: flex;
+   justify-content: center;
+}
+
+@media screen and (max-width:576px){
+    #products{
+        display: block !important;  
+        margin-top: -10px !important; 
+     }
+     .laptopImg{
+        height: 18rem;
+    }
+     .cardContainer{
+         width: 90% !important;         
+     }
+     .carousel-item>img{
+        width: 100% !important;
+        height: 200px !important;
+     }
+     .superLaptopHeading{
+         width: 75% !important;
+     }
+     .navbar-brand{
+         margin-left: -40px !important;
+     }
+     .searchBlock{
+         margin-left: -90px !important;
+     }
+     .navbarbtn{
+         margin-left: -65px !important;
+         margin-top: 10px !important;
+     }
+     #footerProduct{
+         font-size: 10px !important;
+         padding: 3px !important;
+     }
+     .signInPageMedia{
+         font-size: 15px !important;
+         width: 90% !important;
+         border-radius: 20px !important;
+     }
+     .doatOrBlock{
+         display: none;
+     }
+     .getStart{
+            display: none;
+     }
+     .footerEnd{
+         font-size: 8px !important;
+     }
+     .conditionPage{
+         width: 100% !important;
+         margin: 0px !important;
+     }
+}
+@media screen and (min-width: 577px) {
+    #products{
+        display: grid !important;  
+        grid-template-columns: auto auto !important;    
+        margin-top: -10px; 
+    }
+    .cardContainer{
+        width: 90% !important;
+    }
+    .navbar-brand{
+        margin-left: -20px !important;
+    }
+    .cardImg{
+        height: 220px !important;
+    }
+    .searchBlock{
+        margin-left: -70px !important;
+    }
+    .navbarbtn{
+        margin-left: -45px !important;
+        margin-top: 10px !important;
+    }
+    .superLaptopHeading{
+        width: 75% !important;
+    }
+    .signInPageMedia{
+        font-size: 17px !important;
+        width: 80% !important;
+        border-radius: 20px !important;
+    }
+}
+  
+@media screen and (min-width: 792px) {
+    #products{
+        display: grid !important;  
+        grid-template-columns: auto auto auto !important;    
+        margin-top: -10px; 
+     }
+     .cardContainer{
+        width: 90% !important;
+    }
+    .superLaptopHeading{
+        width: 75% !important;
+    }
+    .navbar-brand{
+        margin-left: -10px !important;
+    }
+    .searchBlock{
+        margin-left: -60px !important;
+    }
+    .navbarbtn{
+        margin-left: -35px !important;
+        margin-top: 10px;
+    }
+    .signInPageMedia{
+        width: 80% !important;
+    }
+}
+@media screen and (min-width: 1000px) {
+    #products{
+        display: grid !important;  
+        grid-template-columns: auto auto auto auto !important;    
+        margin-top: -10px; 
+     }
+     .cardContainer{
+        width: 90% !important; 
+    }
+    .superLaptopHeading{
+        width: 60% !important;
+    }
+    .signInPageMedia{
+        width: 60% !important;
+    }
+}
+@media screen and (min-width: 1270px) {
+    #products{
+        display: grid !important;  
+        grid-template-columns: auto auto auto auto auto !important;    
+        margin-top: -10px; 
+     }
+     .cardContainer{
+        width: 90% !important; 
+    }
+    .signInPageMedia{
+        width: 60% !important;
+    }
+}

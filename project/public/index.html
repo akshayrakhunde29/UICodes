@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-Shop</title>
+    <script src="src/js/lib/jquery.js"></script>
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/product.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body onload="signIn()">
+    <header id="headerProduct">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+            <div class="container-fluid">
+              <h1 class="navbar-brand ms-5 ps-5">Laptop-Shop</h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <div class="d-flex ms-5 ps-5 me-5 pe-5">
+                    <div class="input-group searchBlock">
+                      <span class="bi bi-search input-group-text"></span>
+                      <input class="form-control me-2" id="headerSearch" type="search" size="35" placeholder="Search" aria-label="Search">
+                    </div>
+                    <button class="btn btn-outline-success" onclick="headerSearch()" type="submit">Search</button>
+                  </div>
+                  <li class="nav-item ms-4 ps-5">
+                    <button class="btn btn-outline-info navbarbtn" onclick="signIn()">Sign Out</button>
+                  </li>
+                  <li class="nav-item ms-4 ps-5">
+                    <button class="btn btn-outline-secondary navbarbtn" onclick="sellerAddProducts()"><span class="bi bi-cart4"> </span> Add to Card</button>
+                  </li>                 
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <header id="headerLogin" class="p-3 text-center border border-dark">
+        <h1>i-Shop.in</h1>
+    </header>
+
+    <main>
+
+    </main>
+
+   <footer class="border border-dark" id="footerLogin">
+        <div class="p-3">
+            <ol class="list-unstyled d-flex justify-content-center">
+                <li class="me-4"style="cursor: pointer;" onclick="conditionOfUses()">Conditions of Use</li>
+                <li class="me-4" style="cursor: pointer;" onclick="privacyPolicy()">Privacy Notice</li>
+                <li style="cursor: pointer;">Help?</li>
+            </ol>
+            <div class="text-center">© 21-2022, Online-Bookstore, Inc.</div>
+        </div>
+   </footer>
+
+    <footer id="footerProduct" class="border border-dark">
+        <div class="d-flex justify-content-around">
+            <dl>
+                <dt class="mb-3 mt-4">About</dt>
+                <dd><span class="bi bi-telephone-fill">&nbsp;</span> Contact Us</dd>
+                <dd><span class="bi bi-file-earmark-person">&nbsp;</span> About Us</dd>
+                <dd><span class="bi bi-bootstrap">&nbsp;</span> Bigdeal Wholesale</dd>
+            </dl>
+            <dl>
+                <dt class="mb-3 mt-4">SOCIAl</dt>
+                <dd><span class="bi bi-facebook">&nbsp;</span> Facebook</dd>
+                <dd><span class="bi bi-twitter">&nbsp;</span> Twitter</dd>
+                <dd><span class="bi bi-youtube">&nbsp;</span> YouTube</dd>
+                <dd><span class="bi bi-instagram">&nbsp;</span> Instagram</dd>
+            </dl>
+            <dl>
+                <dt class="mb-3 mt-4">POLICY</dt>
+                <dd>Return Policy</dd>
+                <dd>Terms of Use</dd>
+                <dd>Privacy</dd>
+                <dd>Security</dd>
+            </dl>
+            <dl>
+                <dt class="mb-3 mt-4">Office Address</dt>
+                <dd>Bigdeal Internet Ptv Ltv</dd>
+                <dd>Building Sairam, Tower</dd>
+                <dd>Sanjeeva Reddy Nagar,</dd>
+                <dd>Hyderabad, 500038</dd>
+                <dd>Telangana, India</dd>
+                <dd>Telephone: 1122 334 4667</dd>
+            </dl>
+        </div>
+        <dl class="d-flex footerEnd justify-content-around ms-5 me-5">
+            <dt>Sell On i-Shop</dt>
+            <dt>Gift Card</dt>
+            <dt>Help Center?</dt>
+            <dt>@2020 Bigdeal.com</dt>
+        </dl>
+    </footer>
+    <script src="src/js/index.js"></script>
+    <script src="src/js/product.js"></script>
+</body>
+</html>
