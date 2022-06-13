@@ -1,0 +1,3 @@
+var showConte = () => {
+    $('.navbar').toggle();
+}
