@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <h2>Product Details</h2>
+    <dl>
+        <dt>Name</dt>
+        <dd>
+            <input type="text" [(ngModel)]="ProductName">
+        </dd>
+        <dt>Stock</dt>
+        <dd>
+            <input type="checkbox" [(ngModel)]="Stock"> Available
+        </dd>
+        <dt>City</dt>
+        <dd>
+            <select [(ngModel)]="City">
+                <option>Hyd</option>
+                <option>Chandrapur</option>
+            </select>
+        </dd>
+    </dl>
+    ProductName: {{ProductName}} <br>
+    Stock: {{(Stock == true)? "Available":'out of Stock'}}
+    <br>
+    Shipped To: {{City}}
+</div>

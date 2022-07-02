@@ -1,0 +1,26 @@
+<div>
+    <div class="btngroup mt-5 ms-2">
+        <button (click)="btnclick($event)" name="photo" class="btn btn-danger">photo</button>
+        <button (click)="btnclick($event)" name="camera" class="btn btn-danger">camera</button>
+        <button (click)="btnclick($event)" name="fullName" class="btn btn-danger">full_name</button>
+        <button (click)="btnclick($event)" name="landingdate" class="btn btn-danger">landing_date</button>
+    </div>
+    <div  [ngSwitch]="OnLoadTemp">
+        <div *ngSwitchCase="'photo'">
+            <h2>photo</h2>
+            <p><img [src]="product.photos[0].img_src" width="200px" alt=""></p>
+        </div>
+        <div *ngSwitchCase="'camera'">
+            <h2>camera</h2>
+            <p>{{product.photos[0].camera.name}}</p>
+        </div>
+        <div *ngSwitchCase="'fullName'">
+            <h2>full Namee</h2>
+            <p>{{product.photos[0].camera.full_name}}</p>
+        </div>
+        <div *ngSwitchCase="'landingdate'">
+            <h2>landing date</h2>
+            <p>{{product.photos[0].rover.landing_date}}</p>
+        </div>
+    </div>
+</div>

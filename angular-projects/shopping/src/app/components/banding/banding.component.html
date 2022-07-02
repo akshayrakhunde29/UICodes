@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <h2>Interpolution binding</h2>
+    <h4>Product Information</h4>
+    <dl>
+        <dt>Name</dt>
+        <dd>{{product.Name}}</dd>
+        <dd><input type="text" value="{{product.Name}}"></dd>
+        <dt>Price</dt>
+        <dd>{{product.Price}}</dd>
+    </dl>
+
+    <h2>Property Binding</h2>
+    <dl>
+        <dt>Stock</dt>
+        <dd><input type="checkbox" [checked]="product.Stock"> Available</dd>
+    </dl>
+
+    <h2>Attribute Binding</h2> 
+    <table [border]="tableBorder" [width]="tableWidth" [attr.height]="tableHeight">
+        <tr>{{product.Name}}</tr>
+    </table>
+</div>
