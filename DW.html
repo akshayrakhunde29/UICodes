@@ -1,993 +1,680 @@
 INDEX
 
-1. Create an application that allows the user to enter a 
-number in the textbox named ‘getnum’. Check 
-whether the number in the textbox ‘getnum’ is 
-palindrome or not. Print the message accordingly in 
-the label control named lbldisplay when the user 
-clicks on the Button ‘check’.
-28/04/2022
-2. Create an application that allows the user to enter a 
-number in the textbox. Check whether the number 
-in the textbox is Even or Odd. Print the message 
-accordingly in the label control named lbldisplay 
-when the user clicks on the Button ‘check’.
-28/04/2022
-3. Write a program to check whether number is 
-Prime or Not.
-05/05/2022
-4. Create an application to demonstrate the use of 
-Radio Button.
-05/05/2022
-5. List of employees is available in list box. Write an 
-application to add selected or all records from list 
-box to textbox (assume multi-line property of 
-textbox is true)
-12/05/2022
-6. Design a web page to maintain Session State. 12/05/2022
-7. Create the application that accepts name, 
-password,email id, and user id. All the information 
-entry is compulsory. Password should be 
-reconfirmed. Email id should be valid. 
-02/06/2022
-8. Create a web App to display all the ID, Emp_Name, 
-Dept_Name, Emp_Salary and Dept_Id of the 
-employee from the Database and bind it to 
-GridView. Database Fields are (DeptId, DeptName, 
-EmpName, and Salary)
-21/06/2022
-9. Create a web App to display all the ID, Emp_Name, 
-Dept_Name, Emp_Salary and Dept_Id of the 
-employee from the Database and bind it to 
-GridView. Database Fields are (DeptId, DeptName, 
-EmpName, and Salary)
-22/06/2022
-10. Design localized web server. 22/06/2022
-
-Practical 1: Create an application that allows the user to enter a number in the textbox 
-named ‘getnum’. Check whether the number in the textbox ‘getnum’ is palindrome or not. 
-Print the message accordingly in the label control named lbldisplay when the user clicks on 
-the Button ‘check’.
-Source Code
-<%@PageLanguage="C#"AutoEventWireup="true"CodeFile="Palindrome.aspx.cs"Inherits="_D
-efault"%>
-<!DOCTYPEhtmlPUBLIC"-//W3C//DTD XHTML 1.0 
-Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<htmlxmlns="http://www.w3.org/1999/xhtml">
-<headrunat="server">
-<title></title>
-</head>
-<body>
-<formid="form1"runat="server">
-<div>
-<asp:LabelID="Label1"runat="server"Font-Bold="True"Text="Enter a Number"></asp:Label>
-<asp:TextBoxID="getnum"runat="server"></asp:TextBox>
-<br/>
-<asp:ButtonID="Button1"runat="server"onclick="Button1_Click"Text="Button"
-Width="126px"/>
-<asp:LabelID="lblDisplay"runat="server"></asp:Label>
-</div>
-</form>
-</body>
-</html>
-Code:-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-publicpartialclass_Default : System.Web.UI.Page
-{
-protectedvoid Page_Load(object sender, EventArgs e)
- {
- }
-protectedvoid Button1_Click(object sender, EventArgs e)
- {
-int n,rev=0,ori,d;
- n = Convert.ToInt32(getnum.Text);
- ori = n;
-while (n > 0)
- {
- d = n % 10;
- rev = rev * 10 + d;
- n = n / 10;
- }
-if (rev == ori)
- {
- lblDisplay.Text = "Enter number is palindrome: " + ori;
- }
-else
- {
- lblDisplay.Text = "Enter number is not a palindrome: " +ori;
- }
- }
-}
-********************************OUTPUT**********************************
+1 Create table DONAR 
+2 Insert a Values in DONAR Table
+Perform the following Queries on DONAR table
+3 Find all donars whose name starts between alphabets “A” to “S”
+4 Find all donar who belongs to city CHANDRAPUR
+5 Find all donars who does not belongs to CHANDRAPUR City
+6 Find all donars who belongs to either CHANDRAPUR or 
+NAGPUR City
+7 Find all donars whose city value contains NULL
+8 Arrange all donars in the sorted order whose age is between 18 
+and 22
+9 Diplay all Male Donars
+10 Find all male donars have o+Ve blood group
+11 Find all donars who donated the blood between 25-AUG-11 and 
+26-AUG-11
+12 Find all donars who donated more than 100 ml of blood
+13 Find all female donars who belong to city CHANDRAPUR 
+having blood group “A+VE”
+14 Find all female donars who belong to city CHANDRAPUR 
+having blood group “A+VE”
+15 Display all donars according their age
+16 Display the donar list in recent order of donation date
+17 Display all distinct blood group type
+18 Update the age of all donars by 1
+19 Mr. RAJESH RAO changed his name as RAMESH RAO and he 
+is shifted to DURGAPUR. Note the above changes in the table
+20 Display certain name whose first name starts with letter “A” and 
+ends with “D” irrespective of caseletter.
+PL/SQL Programs
+1 Write a PL/SQL block to accept the marks of 3 papers and 
+display the result if student score more then 35 marks in each 
+paper out of maximum marks 100 than declare pass otherwise 
+fail. And specify the class depending upon following conditions:
+Percentage Class
+>=75 Distinction
+>=60 First
+>=45 Second
+Otherwise Third 
+2 Write a PL/SQL block to find factorial of a number and store the 
+number and its factorial in a table called FACT which contains 
+two column namely number and result
+3 Write a PL/SQL block to check number is palindrome or not
+4 Write a program to divide a number by character number. If any 
+error occurs it should be handled properly and store the error 
+number and its description in a table called ERRORH
+5 Write a PL/SQL block to accept and insert a valid data 
+into the table PATIENT, having following structure. 
+Write an appropriate user defined exception.
+PNAME VARCHAR(20)
+AGE NUMBER(2)
+PRESCRIPTION VARCHAR2(20)
+6 Write a PL/SQL block to display first 2 records of table FRUITS 
+which contain only one column called name
+7 Write a PL/SQL Program to Reverse the String
+8 Write a PL/SQL Program to convert each digit of the number 
+into words
+Practical- 1) Create table DONAR with following arttributes
+Name Null? Type
+----------------------------------------- -------- -------------
+DNO NOT NULL NUMBER(4)
+DNAME VARCHAR2(20)
+CITY VARCHAR2(20)
+AGE NUMBER(3)
+SEX VARCHAR2(5)
+BG VARCHAR2(5)
+QUANTITY NUMBER(4)
+DOD DATE
+SQL> create table DONAR(Dno number(4) primary key,Dname varchar(20),City varchar(20),Age 
+number(3),SEX VARCHAR(5),BG varchar(5),Quantity number(4),DOD DATE);
+Table created.
+SQL> DESC DONAR
+Name Null? Type
+----------------------------------------- -------- -------------
+DNO NOT NULL NUMBER(4)
+DNAME VARCHAR2(20)
+CITY VARCHAR2(20)
+AGE NUMBER(3)
+SEX VARCHAR2(5)
+BG VARCHAR2(5)
+QUANTITY NUMBER(4)
+DOD DATE
+B) Insert the following values in DONAR Table with following values
+DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- -------------------------------------
+ 101 RAJESH RAO CHANDRAPUR 28 M O+ve 100 25-AUG-11
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 23 M O+VE 250 26-AUG-11
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 22 F A+VE 100 27-AUG-11
+ 105 ANUSHREE DHAKATE CHANDRAPUR 22 F A-VE 200 26-AUG-11
+ 106 VIJETA DHAKATE BALLARPUR 22 F O+VE 100 25-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+ 108 AMIR KHAN DURGAPUR 25 M O+VE 100 25-AUG-11
+SQL> insert into donar values(&dno,'&dname','&city',&age,'&sex','&BG',&QUANTITY,'&DOD');
+Enter value for dno: 101
+Enter value for dname: RAJESH RAO
+Enter value for city: CHANDRAPUR
+Enter value for age: 28
+Enter value for sex: M
+Enter value for bg: O+ve
+Enter value for quantity: 100
+Enter value for dod: 25-AUG-11
+old 1: insert into donar values(&dno,'&dname','&city',&age,'&sex','&BG',&QUANTITY,'&DOD')
+new 1: insert into donar values(101,'RAJESH RAO','CHANDRAPUR',28,'M','O+ve',100,'25-AUG-11')
+1 row created.
+SQL> /
+Enter value for dno: 102
+Enter value for dname: ANAND SHARMA
+Enter value for city: NAGPUR
+Enter value for age: 20
+Enter value for sex: M
+Enter value for bg: O+VE
+Enter value for quantity: 200
+Enter value for dod: 26-AUG-11
+old 1: insert into donar values(&dno,'&dname','&city',&age,'&sex','&BG',&QUANTITY,'&DOD')
+new 1: insert into donar values(102,'ANAND SHARMA','NAGPUR',20,'M','O+VE',200,'26-AUG-11')
+1 row created.
+SQL> /
+Enter value for dno: 103
+Enter value for dname: VISHAL DESHPANDE
+Enter value for city: HYDERABAD
+Enter value for age: 23
+Enter value for sex: M
+Enter value for bg: O+VE
+Enter value for quantity: 250
+Enter value for dod: 26-AUG-11
+old 1: insert into donar values(&dno,'&dname','&city',&age,'&sex','&BG',&QUANTITY,'&DOD')
+new 1: insert into donar values(103,'VISHAL DESHPANDE','HYDERABAD',23,'M','O+VE',250,'26-AUG-11')
+1 row created.
+SQL> /
+Enter value for dno: 104
+Enter value for dname: SHRUTI RAKHUNDE
+Enter value for city: CHANDRAPUR
+Enter value for age: 22
+Enter value for sex: F
+Enter value for bg: A+VE
+Enter value for quantity: 100
+Enter value for dod: 27-AUG-11
+old 1: insert into donar values(&dno,'&dname','&city',&age,'&sex','&BG',&QUANTITY,'&DOD')
+new 1: insert into donar values(104,'SHRUTI RAKHUNDE','CHANDRAPUR',22,'F','A+VE',100,'27-AUG-11')
+1 row created.
+SQL> /
+Enter value for dno: 105
+Enter value for dname: ANUSHREE DHAKATE
+Enter value for city: CHANDRAPUR
+Enter value for age: 22
+Enter value for sex: F
+Enter value for bg: A-VE
+Enter value for quantity: 200
+Enter value for dod: 26-AUG-11
+old 1: insert into donar values(&dno,'&dname','&city',&age,'&sex','&BG',&QUANTITY,'&DOD')
+new 1: insert into donar values(105,'ANUSHREE DHAKATE','CHANDRAPUR',22,'F','A-VE',200,'26-AUG11')
+1 row created.
+SQL> /
+Enter value for dno: 106
+Enter value for dname: VIJETA DHAKATE
+Enter value for city: BALLARPUR
+Enter value for age: 22
+Enter value for sex: F
+Enter value for bg: O+VE
+Enter value for quantity: 100
+Enter value for dod: 25-AUG-11
+old 1: insert into donar values(&dno,'&dname','&city',&age,'&sex','&BG',&QUANTITY,'&DOD')
+new 1: insert into donar values(106,'VIJETA DHAKATE','BALLARPUR',22,'F','O+VE',100,'25-AUG-11')
+1 row created.
+SQL> /
+Enter value for dno: 107
+Enter value for dname: AAMIR TAJA
+Enter value for city: CHANDRAPUR
+Enter value for age: 21
+Enter value for sex: M
+Enter value for bg: O+VE
+Enter value for quantity: 250
+Enter value for dod: 27-AUG-11
+old 1: insert into donar values(&dno,'&dname','&city',&age,'&sex','&BG',&QUANTITY,'&DOD')
+new 1: insert into donar values(107,'AAMIR TAJA','CHANDRAPUR',21,'M','O+VE',250,'27-AUG-11')
+1 row created.
+SQL> /
+Enter value for dno: 108
+Enter value for dname: AMIR KHAN
+Enter value for city: DURGAPUR
+Enter value for age: 25
+Enter value for sex: M
+Enter value for bg: O+VE
+Enter value for quantity: 100
+Enter value for dod: 25-AUG-11
+old 1: insert into donar values(&dno,'&dname','&city',&age,'&sex','&BG',&QUANTITY,'&DOD')
+new 1: insert into donar values(108,'AMIR KHAN','DURGAPUR',25,'M','O+VE',100,'25-AUG-11')
+1 row created.
+SQL> SELECT * FROM DONAR;
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- -------------------------------------
+ 101 RAJESH RAO CHANDRAPUR 28 M O+ve 100 25-AUG-11
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 23 M O+VE 250 26-AUG-11
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 22 F A+VE 100 27-AUG-11
+ 105 ANUSHREE DHAKATE CHANDRAPUR 22 F A-VE 200 26-AUG-11
+ 106 VIJETA DHAKATE BALLARPUR 22 F O+VE 100 25-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+ 108 AMIR KHAN DURGAPUR 25 M O+VE 100 25-AUG-11
+8 rows selected.
+C) Perform following queries on above table
+1) Find all donars whose name starts between alphabets “A” to “S”
+SQL> select * from donar where dname between 'A' AND 'S';
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- -----------------------------------
+ 101 RAJESH RAO CHANDRAPUR 28 M O+ve 100 25-AUG-11
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 105 ANUSHREE DHAKATE CHANDRAPUR 22 F A-VE 200 26-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+ 108 AMIR KHAN DURGAPUR 25 M O+VE 100 25-AUG-11
+2) Find all donar who belongs to city CHANDRAPUR
+SQL> select * from donar where city='CHANDRAPUR';
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- ---------
+ 101 RAJESH RAO CHANDRAPUR 28 M O+ve 100 25-AUG-11
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 22 F A+VE 100 27-AUG-11
+ 105 ANUSHREE DHAKATE CHANDRAPUR 22 F A-VE 200 26-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+3) Find all donars who does not belongs to CHANDRAPUR City
+SQL> select * from donar where city not in ('CHANDRAPUR');
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+--------- -------------------- -------------------- ---------- ----- ----- ---------- ---------
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 23 M O+VE 250 26-AUG-11
+ 106 VIJETA DHAKATE BALLARPUR 22 F O+VE 100 25-AUG-11
+ 108 AMIR KHAN DURGAPUR 25 M O+VE 100 25-AUG-11
+4) Find all donars who belongs to either CHANDRAPUR or NAGPUR City
+ SQL> SELECT * FROM DONAR WHERE CITY IN('CHANDRAPUR','NAGPUR');
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- -----------------------------
+ 101 RAJESH RAO CHANDRAPUR 28 M O+ve 100 25-AUG-11
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 22 F A+VE 100 27-AUG-11
+ 105 ANUSHREE DHAKATE CHANDRAPUR 22 F A-VE 200 26-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+5) Find all donars whose city value contains NULL
+SQL> SELECT * FROM DONAR WHERE CITY IS NULL;
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- -----------------
+ 105 ANUSHREE DHAKATE 22 F A-VE 200 26-AUG-11
+6) Arrange all donars in the sorted order whose age is between 18 and 22
+SQL> SELECT * FROM DONAR WHERE AGE<=22;
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- ---------
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 22 F A+VE 100 27-AUG-11
+ 105 ANUSHREE DHAKATE 22 F A-VE 200 26-AUG-11
+ 106 VIJETA DHAKATE BALLARPUR 22 F O+VE 100 25-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+7) Find all male donars
+SQL> SELECT * FROM DONAR WHERE SEX='M';
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- ----------------------
+ 101 RAJESH RAO CHANDRAPUR 28 M O+ve 100 25-AUG-11
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 23 M O+VE 250 26-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+ 108 AMIR KHAN DURGAPUR 25 M O+VE 100 25-AUG-11
+8) Find all male donars have o+Ve blood group
+SQL> SELECT * FROM DONAR WHERE SEX='M' AND BG='O+VE';
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- ---------
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 23 M O+VE 250 26-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+ 108 AMIR KHAN DURGAPUR 25 M O+VE 100 25-AUG-11
+9) Find all donars who donated the blood between 25-AUG-11 and 26-AUG-11
  
-Practical 2: Create an application that allows the user to enter a number in the textbox. 
-Check whether the number in the textbox is Even or Odd. Print the message accordingly in 
-the label control named lbldisplay when the user clicks on the Button ‘check’.
-Source Code:-
-<%@PageLanguage="C#"AutoEventWireup="true"CodeFile="Evenoddaspx.aspx.cs"Inherits="E
-venoddaspx"%>
-<!DOCTYPEhtmlPUBLIC"-//W3C//DTD XHTML 1.0 
-Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<htmlxmlns="http://www.w3.org/1999/xhtml">
-<headrunat="server">
-<title></title>
-<styletype="text/css">
-.style1
- {
-width: 100%;
- }
-.style2
- {
-width: 179px;
- }
-</style>
-</head>
-<body>
-<formid="form1"runat="server">
-<tableclass="style1">
-<tr>
-<tdclass="style2"style="text-align: right">
-<asp:LabelID="Label1"runat="server"Text="Enter a Number"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="TextBox1"runat="server"style="margin-left: 0px"></asp:TextBox>
-</td>
-</tr>
-<tr>
-<tdcolspan="2"style="text-align: center">
-<asp:ButtonID="Button1"runat="server"onclick="Button1_Click"Text="Check"/>
-<asp:LabelID="lblDisplay"runat="server"></asp:Label>
-</td>
-</tr>
-</table>
-<div>
-</div>
-</form>
-</body>
-</html>
-Code:-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-publicpartialclassEvenoddaspx : System.Web.UI.Page
-{
-protectedvoid Page_Load(object sender, EventArgs e)
- {
- }
-protectedvoid Button1_Click(object sender, EventArgs e)
- {
-int a;
- a = Convert.ToInt32(TextBox1.Text);
-if (a % 2 == 0)
- {
- lblDisplay.Text = "Enter number is EVEN " + a;
- }
-else
- {
- lblDisplay.Text = "Enter number is ODD " + a;
- }
- }
-}
-**********************************OUTPUT********************************
-Practical 3: Write a program to check whether a number is Prime or Not.
-Source Code:-
-<%@PageLanguage="C#"AutoEventWireup="true"CodeFile="Primeornot.aspx.cs"Inherits="Pri
-meornot"%>
-<!DOCTYPEhtmlPUBLIC"-//W3C//DTD XHTML 1.0 
-Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<htmlxmlns="http://www.w3.org/1999/xhtml">
-<headrunat="server">
-<title></title>
-</head>
-<body>
-<formid="form1"runat="server">
-<div>
-<asp:LabelID="Label1"runat="server"Text="Enter the Number"></asp:Label>
-<asp:TextBoxID="txtNo"runat="server"></asp:TextBox><br/>
-<asp:ButtonID="btnCheck"runat="server"Text="Check"
-onclick="btnCheck_Click"/><br/>
-<asp:LabelID="lblDisplay"runat="server"Text="Display"></asp:Label>
-</div>
-</form>
-</body>
-</html>
-Code:-
-using System;
-usingSystem.Collections.Generic;
-usingSystem.Linq;
-usingSystem.Web;
-usingSystem.Web.UI;
-usingSystem.Web.UI.WebControls;
-publicpartialclassPrimeornot : System.Web.UI.Page
-{
-protectedvoidPage_Load(object sender, EventArgs e)
- {
- }
-protectedvoidbtnCheck_Click(object sender, EventArgs e)
- {
-int no = Convert.ToInt16(txtNo.Text);
-int k = 0;
-for (inti = 2; i< no; i++)
- {
-if (no % i == 0)
- {
- k = 0;
-break;
- }
-else
- {
- k = 1;
- }
- }
-if (k == 1)
- {
-lblDisplay.Text = "This number is prime";
- }
-else
- {
-lblDisplay.Text = "This number is not prime";
- }
- }
-}
-********************************OUTPUT*********************************
-Practical 4: Create an application to demonstrate the use of Radio Button.
-Source Code:-
-<%@PageLanguage="C#"AutoEventWireup="true"CodeFile="checkbox.aspx.cs"Inherits="chec
-kbox"%>
-<!DOCTYPEhtmlPUBLIC"-//W3C//DTD XHTML 1.0 
-Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<htmlxmlns="http://www.w3.org/1999/xhtml">
-<headrunat="server">
-<title></title>
-</head>
-<body>
-<formid="form1"runat="server">
-<div>
-<asp:RadioButtonID="RadioButton1"runat="server"Text="RED"/>
-<asp:RadioButtonID="RadioButton2"runat="server"Text="GREEN"/>
-<asp:RadioButtonID="RadioButton3"runat="server"Text="BLUE"/>
-<br/>
-<br/>
-<asp:ButtonID="Button1"runat="server"onclick="Button1_Click"Text="Button"/>
-<br/>
-<asp:LabelID="Label1"runat="server"Text="WEL COME TO ASP .NET."></asp:Label>
-</div>
-</form>
-</body>
-</html>
-Code:-
-using System;
-usingSystem.Collections.Generic;
-usingSystem.Linq;
-usingSystem.Web;
-usingSystem.Web.UI;
-usingSystem.Web.UI.WebControls;
-publicpartialclasscheckbox : System.Web.UI.Page
-{
-protectedvoidPage_Load(object sender, EventArgs e)
- {
- }
-protectedvoid Button1_Click(object sender, EventArgs e)
- {
-if ( RadioButton1.Checked == true)
- {
- Label1.ForeColor = System.Drawing.Color.Red;
- RadioButton2.Checked = false;
- RadioButton3.Checked = false;
- }
-elseif (RadioButton2.Checked == true)
- {
- Label1.ForeColor = System.Drawing.Color.Green;
- RadioButton1.Checked = false;
- RadioButton3.Checked = false;
- }
-elseif (RadioButton3.Checked == true)
- {
- Label1.ForeColor = System.Drawing.Color.Blue;
- RadioButton1.Checked = false;
- RadioButton2.Checked = false;
- }
- }
-}
-************************************OUTPUT******************************
-Practical 5: List of employees is available in list box. Write an application to add selected or 
-all records from list box to textbox (assume multi-line property of textbox is true)
-Source Code
-<%@PageLanguage="C#"AutoEventWireup="true"CodeFile="listbox.aspx.cs"Inherits="listbox"
-%>
-<!DOCTYPEhtmlPUBLIC"-//W3C//DTD XHTML 1.0 
-Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<htmlxmlns="http://www.w3.org/1999/xhtml">
-<headrunat="server">
-<title></title>
-</head>
-<body>
-<formid="form1"runat="server">
-<div>
-<asp:ListBoxID="ListBox1"runat="server"AutoPostBack="True"Height="112px">
-<asp:ListItem>Aradhana Deshmukh</asp:ListItem>
-<asp:ListItem>Amit Shah</asp:ListItem>
-<asp:ListItem>Bhavana Talmale </asp:ListItem>
-<asp:ListItem>Devika Gupta </asp:ListItem>
-<asp:ListItem>Rahul Jain </asp:ListItem>
-<asp:ListItem>Twinkle Kale</asp:ListItem>
-</asp:ListBox>
-<asp:ButtonID="Button1"runat="server"Height="44px"onclick="Button1_Click"
-Text="ADD"Width="126px"/>
-<asp:TextBoxID="TextBox1"runat="server"Height="111px"TextMode="MultiLine"></asp:Text
-Box>
-</div>
-</form>
-</body>
-</html>
-Code:-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-publicpartialclasslistbox : System.Web.UI.Page
-{
-protectedvoid Page_Load(object sender, EventArgs e)
- {
- }
-protectedvoid Button1_Click(object sender, EventArgs e)
- {
-int i;
-for (i = 0; i < ListBox1.Items.Count; i++)
- {
-if (ListBox1.Items[i].Selected == true)
- TextBox1.Text += ListBox1.Items[i].Text + "\n";
- }
- }
-}
-******************************OUTPUT************************************
-Practical 6: Design a web page to maintain Session State.
-Source Code
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="session.aspx.cs"
-Inherits="Default2" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
- <title></title>
- <style type="text/css">
- .style2
- {
- text-align: right;
- width: 386px;
- }
- .style3
- {
- text-align: right;
- height: 23px;
- width: 386px;
- }
- .style4
- {
- height: 23px;
- }
- .center-div {
- margin: auto;
- width: 50%;
- border: 2px solid orange;
- padding: 10px;
- }
- </style>
-</head>
-<body>
- <form id="form1" runat="server">
- <table class="center-div">
- <tr>
- <td colspan="2" style="text-align: center">
- <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large"
- ForeColor="#003399" Text="Session State Example"></asp:Label>
- </td>
- </tr>
- <tr>
- <td class="style3">
- <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Larger"
- ForeColor="#006699" Text="Name"></asp:Label>
- </td>
- <td class="style4">
- <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
- </td>
- </tr>
- <tr>
- <td class="style2">
- <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Larger"
- ForeColor="#006699" Text="City"></asp:Label>
- </td>
- <td>
- <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
- </td>
- </tr>
- <tr>
- <td class="style2">
- <asp:Button ID="Button1" runat="server" BackColor="#CCFF99"
-ForeColor="#0066CC"
- onclick="Button1_Click" Text="Submit" />
- </td>
- <td>
- &nbsp;</td>
- </tr>
- </table>
- <div>
+SQL> select * from donar where dod between '25-AUG-11' AND '26-AUG-11';
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- ----------------------------------
+ 101 RAJESH RAO CHANDRAPUR 28 M O+ve 100 25-AUG-11
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 23 M O+VE 250 26-AUG-11
+ 105 ANUSHREE DHAKATE 22 F A-VE 200 26-AUG-11
+ 106 VIJETA DHAKATE BALLARPUR 22 F O+VE 100 25-AUG-11
+ 108 AMIR KHAN DURGAPUR 25 M O+VE 100 25-AUG-11
+6 rows selected.
+10) Find all donars who donated more than 100 ml of blood
+SQL> select * from donar where quantity > 100;
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- -------------------
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 23 M O+VE 250 26-AUG-11
+ 105 ANUSHREE DHAKATE 22 F A-VE 200 26-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+11) Find all female donars who belong to city CHANDRAPUR having blood group “A+VE”
+SQL> SELECT * FROM DONAR WHERE SEX='F' AND CITY='CHANDRAPUR';
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- ------------------------
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 22 F A+VE 100 27-AUG-11
+12) Display all donars according their age
+ SQL> SELECT * FROM DONAR ORDER BY AGE;
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- --------------------------------------
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 22 F A+VE 100 27-AUG-11
+ 106 VIJETA DHAKATE BALLARPUR 22 F O+VE 100 25-AUG-11
+ 105 ANUSHREE DHAKATE 22 F A-VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 23 M O+VE 250 26-AUG-11
+ 108 AMIR KHAN DURGAPUR 25 M O+VE 100 25-AUG-11
+ 101 RAJESH RAO CHANDRAPUR 28 M O+ve 100 25-AUG-11
+8 rows selected.
+13) Display the donar list in recent order of donation date
+SQL> SELECT * FROM DONAR ORDER BY DOD DESC;
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- --------------------------------
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 22 F A+VE 100 27-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 21 M O+VE 250 27-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 23 M O+VE 250 26-AUG-11
+ 105 ANUSHREE DHAKATE 22 F A-VE 200 26-AUG-11
+ 102 ANAND SHARMA NAGPUR 20 M O+VE 200 26-AUG-11
+ 108 AMIR KHAN DURGAPUR 25 M O+VE 100 25-AUG-11
+ 106 VIJETA DHAKATE BALLARPUR 22 F O+VE 100 25-AUG-11
+ 101 RAJESH RAO CHANDRAPUR 28 M O+ve 100 25-AUG-11
+8 rows selected.
+14) Display all distinct blood group type
+SQL> SELECT DISTINCT BG FROM DONAR;
+BG
+-----
+O+ve
+A-VE
+A+VE
+O+VE
+15) Update the age of all donars by 1
+SQL> UPDATE DONAR SET AGE=AGE+1;
+8 rows updated.
+SQL> SELECT * FROM DONAR;
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- ---------
+ 101 RAJESH RAO CHANDRAPUR 29 M O+ve 100 25-AUG-11
+ 102 ANAND SHARMA NAGPUR 21 M O+VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 24 M O+VE 250 26-AUG-11
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 23 F A+VE 100 27-AUG-11
+ 105 ANUSHREE DHAKATE 23 F A-VE 200 26-AUG-11
+ 106 VIJETA DHAKATE BALLARPUR 23 F O+VE 100 25-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 22 M O+VE 250 27-AUG-11
+ 108 AMIR KHAN DURGAPUR 26 M O+VE 100 25-AUG-11
+8 rows selected.
+16) Mr. RAJESH RAO changed his name as RAMESH RAO and he is shifted to DURGAPUR. Note the 
+above changes in the table
+ SQL> UPDATE DONAR SET DNAME='RAMESH RAO',CITY='DURGAPUR' WHERE DNO=101;
+1 row updated.
+SQL> SELECT * FROM DONAR;
+ DNO DNAME CITY AGE SEX BG QUANTITY DOD
+---------- -------------------- -------------------- ---------- ----- ----- ---------- ----------------------------------------
+ 101 RAMESH RAO DURGAPUR 29 M O+ve 100 25-AUG-11
+ 102 ANAND SHARMA NAGPUR 21 M O+VE 200 26-AUG-11
+ 103 VISHAL DESHPANDE HYDERABAD 24 M O+VE 250 26-AUG-11
+ 104 SHRUTI RAKHUNDE CHANDRAPUR 23 F A+VE 100 27-AUG-11
+ 105 ANUSHREE DHAKATE 23 F A-VE 200 26-AUG-11
+ 106 VIJETA DHAKATE BALLARPUR 23 F O+VE 100 25-AUG-11
+ 107 AAMIR TAJA CHANDRAPUR 22 M O+VE 250 27-AUG-11
+ 108 AMIR KHAN DURGAPUR 26 M O+VE 100 25-AUG-11
+8 rows selected.
+17) Display certain name whose first name starts with letter “A” and ends with “D” irrespective 
+of caseletter.
+SQL> select * from donar where dname like'A%D';
+no rows selected
+PL/SQL Programs
+1)Que: Write a PL/SQL block to accept the marks of 3 papers and display the result if 
+student score more then 35 marks in each paper out of maximum marks 100 than declare 
+pass otherwise fail. And specify the class depending upon following conditions:
+Percentage Class
+>=75 Distinction
+>=60 First
+>=45 Second
+Otherwise Third.
+SQL>ED PL1
+SET SERVEROUTPUT ON
+SET VERIFY OFF
+CLEAR SCREEN
+DECLARE
+ PAPER1 INTEGER:=&PAPER1;
+ PAPER2 INTEGER:=&PAPER2;
+ PAPER3 INTEGER:=&PAPER3;
+ TOTALM INTEGER;
+ PER NUMBER(5,2);
+ CLASS CHAR(15);
+BEGIN
+IF(PAPER1>=35 AND PAPER2>=35 AND PAPER3>=35) THEN 
+ DBMS_OUTPUT.PUT_LINE('PASS');
+ TOTALM:=PAPER1+PAPER2+PAPER3;
+ PER:=TOTALM/3;
+ IF(PER>=75) THEN
+ CLASS:='DISTINCTION';
+ ELSIF(PER>=60)THEN
+ CLASS:='FIRSTCLASS';
+ ELSIF(PER>=45)THEN
+ CLASS:='SECONDCLASS';
+ ELSE
+ CLASS:='THIRDCLASS';
+ END IF;
+ DBMS_OUTPUT.PUT_LINE('SCORED'|| PER||'%AND GOT'||CLASS);
+ ELSE
+ DBMS_OUTPUT.PUT_LINE('FAIL');
+ END IF;
+ END;
+/ 
+ OUTPUT:
+SQL>@ PL1
+Enter value for paper1: 75
+Enter value for paper2: 75
+Enter value for paper3: 75
+PASS
+SCORED75%AND GOTDISTINCTION
+PL/SQL procedure successfully completed
+.
+2)QUE:-/*Write a PL/SQL block to find factorial of a number and store the 
+number and its factorial in a table called FACT which contains two column 
+namely number and result.*/
+SQL>ED PL2
+SET SERVEROUTPUT ON
+SET VERIFY OFF
+CLEAR SCREEN
+DECLARE
+ N INTEGER;
+ F NUMBER:=1;
+BEGIN
+ N:=&N;
+ FOR I IN REVERSE 1..N
+LOOP
+ F:=F*I;
+END LOOP;
+ DBMS_OUTPUT.PUT_LINE('FACTORIAL OF ' ||N|| ' IS ' ||F);
+ INSERT INTO FACT VALUES(N,F);
+END;
+/ 
+OUTPUT:-
+SQL>@PL2
+Enter value for n: 5
+FACTORIAL OF 5 IS 120
+PL/SQL procedure successfully completed.
+SQL> SELECT* FROM FACT;
+FNUMBER RESULT
+---------------- ------------
+ 5 120
+3) Que: Write a PL/SQL block to check number is palindrome or not.
+SQL>ED PL3
+SET SERVEROUTPUT ON
+SET VERIFY OFF
+CLEAR SCREEN
+DECLARE
+ N NUMBER;
+ R NUMBER;
+ S NUMBER:=0;
+ TN NUMBER;
+ BEGIN
+ N:=&N;
+ TN:=N;
+ WHILE(N>0)
+ LOOP
+ R:=MOD(N,10);
+ S:=S*10+R;
+ N:=FLOOR(N/10);
+ END LOOP;
+DBMS_OUTPUT.PUT_LINE('REVERSE NUMBER IS '||S);
+ IF(TN=S) THEN
+ DBMS_OUTPUT.PUT_LINE('NUMBER '||TN||' IS PALINDROME');
+ ELSE
+ DBMS_OUTPUT.PUT_LINE('NUMBER '||TN||' IS NOT PALINDROME');
+ END IF;
+END;
+/ 
  
- </div>
- </form>
-</body>
-</html>
-Code:-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-public partial class Default2 : System.Web.UI.Page
-{
- protected void Page_Load(object sender, EventArgs e)
- {
- }
- protected void Button1_Click(object sender, EventArgs e)
- {
- Session["Name"] = TextBox1.Text;
- Session["City"] = TextBox2.Text;
- Response.Redirect("next.aspx");
- }
-}
-Source Code
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Next.aspx.cs" Inherits="Next"
-%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
- <title></title>
- <style type="text/css">
- .style2
- {
- text-align: right;
- width: 300px;
- }
- .style3
- {
- width: 300px;
- }
- .center-div {
- margin: auto;
- width: 50%;
- border: 2px solid orange;
- padding: 10px;
- }
- .style4
- {
- width: 271px;
- }
- </style>
-</head>
-<body>
- <form id="form1" runat="server">
- <div>
- 
- <table class="center-div">
- <tr>
- <td colspan="2" style="text-align: center">
- <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Large"
- Text="Retriving Session Data"></asp:Label>
- </td>
- </tr>
- <tr>
- <td class="style2">
- <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Large"
- Text="Name"></asp:Label>
- </td>
- <td class="style4">
- <asp:Label ID="Label4" runat="server"></asp:Label>
- </td>
- </tr>
- <tr>
- <td class="style2">
- <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Large"
- Text="Label"></asp:Label>
- </td>
- <td class="style4">
- <asp:Label ID="Label5" runat="server"></asp:Label>
- </td>
- </tr>
- <tr>
- <td class="style3" style="text-align: right">
- <asp:Button ID="Button1" runat="server" BackColor="#CCFFCC" FontBold="True"
- Font-Size="Medium" ForeColor="#003399" onclick="Button1_Click"
-Text="Retrive" />
- </td>
- <td class="style4">
- &nbsp;</td>
- </tr>
- </table>
- 
- </div>
- </form>
-</body>
-</html>
-Code:-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-public partial class Next : System.Web.UI.Page
-{
- protected void Page_Load(object sender, EventArgs e)
- {
- }
- protected void Button1_Click(object sender, EventArgs e)
- {
- Label4.Text = Session["Name"].ToString();
- Label5.Text = Session["City"].ToString();
- }
-}
-********************************OUTPUT*********************************
-Practical 7: Create the application that accepts name, password, email id, and user id. All 
-the information entry is compulsory. Password should be reconfirmed. Email id should be 
-valid. 
-Source Code for Registration Form
-<%@PageLanguage="C#"AutoEventWireup="true"CodeFile="Registration.aspx.cs"Inherits="Re
-gistration"%>
-<!DOCTYPEhtmlPUBLIC"-//W3C//DTD XHTML 1.0 
-Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<htmlxmlns="http://www.w3.org/1999/xhtml">
-<headrunat="server">
-<title></title>
-<styletype="text/css">
-.style1
- {
-width: 100%;
- }
-.style2
- {
-text-align: right;
-width: 436px;
- }
-.style3
- {
-height: 23px;
-text-align: center;
- }
-</style>
-</head>
-<bodystyle="height: 214px; width: 906px">
-<formid="form1"runat="server">
-<tableclass="style1">
-<tr>
-<tdcolspan="2"style="text-align: center">
-<asp:LabelID="Label1"runat="server"Font-Bold="True"Text="Registration"></asp:Label>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label2"runat="server"Text="Name"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="TextBox1"runat="server"></asp:TextBox>
-<asp:RequiredFieldValidatorID="RequiredFieldValidator1"runat="server"
-ControlToValidate="TextBox1"ErrorMessage="Enter a 
-Name"ForeColor="Red"></asp:RequiredFieldValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label3"runat="server"Text="Password"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="TextBox2"runat="server"TextMode="Password"></asp:TextBox>
-<asp:RequiredFieldValidatorID="RequiredFieldValidator2"runat="server"
-ControlToValidate="TextBox2"ErrorMessage="Enter a 
-Password"ForeColor="Red"></asp:RequiredFieldValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label4"runat="server"Text="Confirm Password"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="TextBox3"runat="server"TextMode="Password"></asp:TextBox>
-<asp:CompareValidatorID="CompareValidator1"runat="server"
-ControlToCompare="TextBox2"ControlToValidate="TextBox3"
-ErrorMessage="Password doesn't match"ForeColor="Red"></asp:CompareValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label5"runat="server"Text="E-Mail Id"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="TextBox4"runat="server"></asp:TextBox>
-<asp:RegularExpressionValidatorID="RegularExpressionValidator1"runat="server"
-ControlToValidate="TextBox4"ErrorMessage="Enter a valid Mail Id"
-ForeColor="Red"
-ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-
-.]\w+)*"></asp:RegularExpressionValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label6"runat="server"Text="User Id"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="TextBox5"runat="server"></asp:TextBox>
-<asp:RequiredFieldValidatorID="RequiredFieldValidator3"runat="server"
-ControlToValidate="TextBox5"ErrorMessage="Enter a User 
-Id"ForeColor="Red"></asp:RequiredFieldValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style3"colspan="2">
-<asp:ButtonID="Button1"runat="server"Font-Bold="True"Text="Submit"
-onclick="Button1_Click"/>
-</td>
-</tr>
-</table>
-</form>
-</body>
-</html>
-Code:-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-publicpartialclassRegistration : System.Web.UI.Page
-{
-protectedvoid Page_Load(object sender, EventArgs e)
- {
- }
-protectedvoid Button1_Click(object sender, EventArgs e)
- {
-string nm, uid, email,pwd, cpwd;
- nm = TextBox1.Text;
- pwd = TextBox2.Text;
- cpwd = TextBox3.Text;
- uid = TextBox5.Text;
- email = TextBox4.Text;
-if (nm == "abc"&& pwd == "123"&& cpwd == "123"&& uid == "xyz"&& email == 
-"abc@gmail.com")
- {
- Response.Write("Login Successful");
- Response.Redirect("Login.aspx");
- TextBox1.Text = "";
- TextBox2.Text = "";
- TextBox3.Text = "";
- TextBox4.Text = "";
- TextBox5.Text = "";
- }
-else
- {
- Response.Write("Login Fail");
- }
- }
-}
-****************************OUTPUT**************************************
-Practical 8: Create a web App to display all the ID, Emp_Name, Dept_Name, Emp_Salary 
-and Dept_Id of the employee from the Database and bind it to GridView. Database Fields 
-are (DeptId, DeptName, EmpName, and Salary)
-Source Code
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs"
-Inherits="_Default" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
- <title></title>
- <style type="text/css">
- .style1
- {
- width: 100%;
- }
- .style2
- {
- text-align: right;
- width: 400px;
- }
- .style3
- {
- height: 34px;
- }
- </style>
-</head>
-<body>
- <form id="form1" runat="server">
- <div>
- 
- <table class="style1">
- <tr>
- <td class="style2">
- <asp:Label ID="Label1" runat="server" Text="ID"></asp:Label>
- </td>
- <td>
- <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
- </td>
- </tr>
- <tr>
- <td class="style2">
- <asp:Label ID="Label2" runat="server" Text="Emp_Name"></asp:Label>
- </td>
- <td>
- <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
- </td>
- </tr>
- <tr>
- <td class="style2">
- <asp:Label ID="Label3" runat="server" Text="Dept_Id"></asp:Label>
- </td>
- <td>
- <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
- </td>
- </tr>
- <tr>
- <td class="style2">
- <asp:Label ID="Label4" runat="server" Text="Dept_Name"></asp:Label>
- </td>
- <td>
- <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
- </td>
- </tr>
- <tr>
- <td class="style2">
- <asp:Label ID="Label5" runat="server" Text="Emp_Salary"></asp:Label>
- </td>
- <td>
- <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
- </td>
- </tr>
- <tr>
- <td class="style3" colspan="2" style="text-align: center">
- <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Submit"
-/>
-&nbsp;
- &nbsp;<asp:Button ID="Button2" runat="server" onclick="Button2_Click"
- Text="ShowData" />
- </td>
- </tr>
- <tr>
- <td class="style3" colspan="2" style="text-align: center">
- <asp:GridView ID="GridView1" runat="server">
- </asp:GridView>
- </td>
- </tr>
- </table>
- </div>
- </form>
-</body>
-</html>
-Code
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.Sql;
-using System.Data.SqlClient;
-public partial class _Default : System.Web.UI.Page
-{
- protected void Page_Load(object sender, EventArgs e)
- {
- }
- protected void Button1_Click(object sender, EventArgs e)
- {
- SqlConnection con = new SqlConnection(@"Data Source=PC03;Initial 
-Catalog=EMPLOYEE;Integrated Security=True");
- 
- SqlCommand cmd = new SqlCommand("insert into 
-EMPLOYEE(ID,Emp_Name,Dept_Id,Dept_Name,Emp_Salary)values(@ID,@Emp_Name,@De
-pt_Id,@Dept_Name,@Emp_Salary)", con);
- con.Open();
- cmd.Parameters.AddWithValue("@ID", TextBox1.Text);
- cmd.Parameters.AddWithValue("@Emp_Name", TextBox2.Text);
- cmd.Parameters.AddWithValue("@Dept_Id", TextBox3.Text);
- cmd.Parameters.AddWithValue("@Dept_Name", TextBox4.Text);
- cmd.Parameters.AddWithValue("@Emp_Salary", TextBox5.Text);
- cmd.ExecuteNonQuery();
- con.Close();
- Response.Write("DATA SAVED ");
- Response.Redirect("http://localhost:57227/WebSite62/welcome.aspx");
- }
- protected void Button2_Click(object sender, EventArgs e)
- {
- SqlConnection con = new SqlConnection(@"Data Source=PC03;Initial 
-Catalog=EMPLOYEE;Integrated Security=True");
- con.Open();
- SqlDataAdapter da = new SqlDataAdapter("select * from EMPLOYEE", con);
- DataSet ds = new DataSet();
- da.Fill(ds);
- GridView1.DataSource = ds;
- GridView1.DataBind();
- }
-}
-********************************OUTPUT*********************************
- 
- 
-Practical 9: Create a Registration Module which adds Username, full name, Email, 
-Password, Confirm password, Gender in the database. 
-Source Code:-
-<%@PageLanguage="C#"AutoEventWireup="true"CodeFile="Registration.aspx.cs"Inherits="Re
-gistration"%>
-<!DOCTYPEhtmlPUBLIC"-//W3C//DTD XHTML 1.0 
-Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<htmlxmlns="http://www.w3.org/1999/xhtml">
-<headrunat="server">
-<title></title>
-<styletype="text/css">
-.style1
- {
-width: 114%;
- }
-.style2
- {
-text-align: right;
-width: 546px;
- }
-</style>
-</head>
-<bodystyle="width: 1162px">
-<formid="form1"runat="server">
-<tableclass="style1">
-<tr>
-<tdcolspan="2"style="text-align: center">
-<asp:LabelID="Label1"runat="server"Font-Bold="True"Text="Registration"></asp:Label>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label2"runat="server"Text="User Name"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="txtuser"runat="server"></asp:TextBox>
-<asp:RequiredFieldValidatorID="RequiredFieldValidator1"runat="server"
-ControlToValidate="txtuser"ErrorMessage="Please enter User 
-Name"></asp:RequiredFieldValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label3"runat="server"Text="Full Name"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="txtfname"runat="server"></asp:TextBox>
-<asp:RequiredFieldValidatorID="RequiredFieldValidator2"runat="server"
-ControlToValidate="txtfname"ErrorMessage="Please enter 
-password"></asp:RequiredFieldValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label4"runat="server"Text="Email Address"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="txtemail"runat="server"></asp:TextBox>
-<asp:RequiredFieldValidatorID="RequiredFieldValidator3"runat="server"
-ControlToValidate="txtemail"ErrorMessage="Please enter email 
-address"></asp:RequiredFieldValidator>
-<asp:RegularExpressionValidatorID="RegularExpressionValidator1"runat="server"
-ControlToValidate="txtemail"ErrorMessage="Please enter proper e-mail address"
-ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-
-.]\w+)*"></asp:RegularExpressionValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label5"runat="server"Text="Password"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="txtpwd"runat="server"TextMode="Password"></asp:TextBox>
-<asp:RequiredFieldValidatorID="RequiredFieldValidator4"runat="server"
-ControlToValidate="txtpwd"ErrorMessage="Please enter 
-password"></asp:RequiredFieldValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label6"runat="server"Text="Confirm Password"></asp:Label>
-</td>
-<td>
-<asp:TextBoxID="txtcpwd"runat="server"TextMode="Password"></asp:TextBox>
-<asp:CompareValidatorID="CompareValidator1"runat="server"
-ControlToCompare="txtpwd"ControlToValidate="txtcpwd"
-ErrorMessage="Password dosen't match"></asp:CompareValidator>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:LabelID="Label8"runat="server"Text="Gender"></asp:Label>
-</td>
-<td>
-<asp:DropDownListID="ddlgender"runat="server">
-<asp:ListItem>Male</asp:ListItem>
-<asp:ListItem>Female</asp:ListItem>
-</asp:DropDownList>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-<asp:ButtonID="Button1"runat="server"onclick="Button1_Click"Text="SUBMIT"/>
-</td>
-<td>
-<asp:ButtonID="Button2"runat="server"onclick="Button2_Click"Text="RESET"/>
-</td>
-</tr>
-<tr>
-<tdclass="style2">
-&nbsp;</td>
-<td>
-&nbsp;</td>
-</tr>
-</table>
-<divstyle="text-align: center">
-<asp:LabelID="Label9"runat="server"></asp:Label>
-</div>
-</form>
-</body>
-</html>
-Code:-
-using System;
-using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Xml.Linq;
-using System.Data.SqlClient;
-using System.Configuration;
-publicpartialclass_Default : System.Web.UI.Page
-{
-protectedvoid Page_Load(object sender, EventArgs e)
- {
-if (IsPostBack)
- {
-SqlConnection con = 
-newSqlConnection(ConfigurationManager.ConnectionStrings["loginConnectionString"].Connecti
-onString);
- con.Open();
-string checkuser = "select count (*) from Table1 where login ='" + TextBox1.Text + "'";
-SqlCommand cmd = newSqlCommand(checkuser, con);
-int temp = Convert.ToInt32 (cmd.ExecuteScalar().ToString());
-if (temp == 1)
- {
- Response.Write("user already exist");
- }
- con.Close();
- }
- }
-protectedvoid Button1_Click(object sender, EventArgs e)
- {
-SqlConnection con = newSqlConnection
-(ConfigurationManager.ConnectionStrings["loginConnectionString"].ConnectionString); 
- con.Open();
-string query ="insert into Table1(login,pwd)values (@Login,@pwd)";
-SqlCommand cmd = newSqlCommand(query,con);
- cmd.Parameters.AddWithValue("Login", TextBox1.Text );
- cmd.Parameters.AddWithValue("Pwd", TextBox2.Text);
- cmd.ExecuteNonQuery();
- Response.Write("regi successfull");
- Response.Redirect("loginsite.aspx");
- con.Close();
- }
-}
-************************
+OUTPUT:
+SQL>@ PL3
+Enter value for n: 121
+REVERSE NUMBER IS 121
+NUMBER 121 IS PALINDROME
+PL/SQL procedure successfully completed.
+SQL>@ PL3
+Enter value for n: 122
+REVERSE NUMBER IS 122
+NUMBER 122 IS NOT PALINDROME
+PL/SQL procedure successfully completed.
+4) Que: Write a program to divide a number by character number. If any error occurs 
+it should be handled properly and store the error number and its description in a 
+table called ERRORH.
+SQL> create table ERRORH
+ 2 (ERRNO NUMBER(10),
+ 3 ERR_DESC VARCHAR2(100));
+Table created.
+SQL> ED PL4
+SET SERVEROUTPUT ON
+SET VERIFY OFF
+CLEAR SCREEN
+DECLARE
+A NUMBER(6):=&A;
+B CHAR(6):='&B';
+C NUMBER(7);
+TERRNO ERRORH.ERRNO%TYPE;
+TERR_DESC ERRORH.ERR_DESC%TYPE;
+BEGIN
+C:=A/TO_NUMBER(B);
+DBMS_OUTPUT.PUT_LINE('DIVISION OF TWO NUMBER IS'||C);
+EXCEPTION
+ WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('ERROR:- '||SQLCODE);
+DBMS_OUTPUT.PUT_LINE('DESCRIPTION OF ERROR'||SQLERRM);
+TERRNO:=SQLCODE;
+TERR_DESC:=SUBSTR(SQLERRM,10);
+INSERT INTO ERRORH VALUES(TERRNO,TERR_DESC);
+END;
+/
+OUTPUT:
+SQL> @PL4
+Enter value for a: 5
+Enter value for b: Y
+ERROR:- -6502
+DESCRIPTION OF ERRORORA-06502: PL/SQL: numeric or value error: character to
+number conversion error
+PL/SQL procedure successfully completed.
+SQL> select * from ERRORH;
+ERRNO ERR_DESC
+---------- -----------------------------------------------------------------------------------------
+-6502 : PL/SQL: numeric or value error: character to number conversion error
+5) Que: Write a PL/SQL block to accept and insert a valid data into the table 
+PATIENT, having following structure. Write an appropriate user defined exception.
+PNAME VARCHAR(20)
+AGE NUMBER(2)
+PRESCRIPTION VARCHAR2(20)
+SQL>ED PL5
+SET SERVEROUTPUT ON
+SET VERIFY OFF
+CLEAR SCREEN
+DECLARE
+TPNAME PATIENT.PNAME%TYPE;
+TAGE PATIENT.AGE%TYPE;
+TPRESCRIPTION PATIENT.PRESCRIPTION%TYPE;
+CHECK_CHAR EXCEPTION;
+CHECK_AGE EXCEPTION;
+BEGIN
+TPNAME:='&NAME';
+IF TPNAME IS NULL THEN
+RAISE CHECK_CHAR;
+END IF;
+TAGE:=&AGE;
+IF TAGE<=0 THEN
+RAISE CHECK_AGE;
+ELSE
+NULL;
+END IF;
+TPRESCRIPTION:='&PRESCRIPTION';
+IF TPRESCRIPTION IS NULL THEN
+RAISE CHECK_CHAR;
+END IF;
+INSERT INTO PATIENT VALUES(TPNAME,TAGE,TPRESCRIPTION);
+EXCEPTION
+WHEN CHECK_CHAR THEN
+DBMS_OUTPUT.PUT_LINE('CAN NOT BE BLANK');
+WHEN CHECK_AGE THEN
+DBMS_OUTPUT.PUT_LINE('AGE SHOULD BE > 0');
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('ERROR:-'||SQLCODE);
+DBMS_OUTPUT.PUT_LINE('DESCRIPTION OF ERROR'||SQLERRM);
+END;
+/
+OUTPUT:
+SQL>@PL5
+Enter value for name: RAM
+Enter value for age: 25
+Enter value for prescription: CROCIN
+PL/SQL procedure successfully completed.
+SQL>@PL5
+Enter value for name: RAJ
+Enter value for age: -25
+Enter value for prescription: DISPRIN
+AGE SHOULD BE > 0
+PL/SQL procedure successfully completed.
+SQL>@PL5
+Enter value for name: RAHUL
+Enter value for age: 30
+Enter value for prescription: 
+CAN NOT BE BLANK
+PL/SQL procedure successfully completed.
+SQL> SELECT * FROM PATIENT;
+PNAME AGE PRESCRIPTION
+-------------------- ---------- --------------------
+RAM 25 CROCIN
+6) Que:-/*Write a PL/SQL block to display first 2 records of table 
+FRUITS which contain only one column called name.*/
+SQL> ED PL5
+SET SERVEROUTPUT ON
+SET VERIFY OFF
+CLEAR SCREEN
+DECLARE
+ CURSOR CFRUITS IS SELECT NAME FROM FRUITS;
+ CNAME VARCHAR2(20);
+BEGIN
+ OPEN CFRUITS;
+ DBMS_OUTPUT.PUT_LINE('FRUITS ARE'); 
+ DBMS_OUTPUT.PUT_LINE('**********************');
+ FOR I IN 1..2
+LOOP
+ FETCH CFRUITS INTO CNAME;
+ DBMS_OUTPUT.PUT_LINE(CNAME);
+END LOOP;
+ DBMS_OUTPUT.PUT_LINE('**********************');
+ CLOSE CFRUITS;
+EXCEPTION
+ WHEN CURSOR_ALREADY_OPEN THEN
+ DBMS_OUTPUT.PUT_LINE('CURSOR ALREADY OPEN');
+ END;
+/
+OUTPUT:-
+SQL> SELECT* FROM FRUITS;
+NAME
+--------------------
+APPLE
+MANGO
+ORANGE
+SQL>@ PL5
+FRUITS ARE
+**********************
+APPLE
+MANGO
+**********************
+PL/SQL procedure successfully completed.
+Que 7. Write a PL/SQL Program to Reverse the String
+DECLARE
+-- declare variable str , len
+-- and str1 of datatype varchar
+str VARCHAR(20) := 'skeegrofskeeg';
+len NUMBER;
+str1 VARCHAR(20);
+BEGIN
+-- Here we find the length of string
+len := Length(str);
+-- here we starting a loop from max len to 1
+FOR i IN REVERSE 1.. len LOOP
+-- assigning the reverse string in str1
+str1 := str1
+|| Substr(str, i, 1);
+END LOOP;
+dbms_output.Put_line('Reverse of string is '
+|| str1);
+END;
+-- Program End
+Result :-
+Input: skeegrofskeeg
+Output: geeksforgeeks
+8) Write a PL/SQL Program to convert each digit of the number into words
+DECLARE
+num INTEGER;
+num_to_word VARCHAR2(100);
+str VARCHAR2(100);
+len INTEGER;
+c INTEGER;
+BEGIN
+num := 123456;
+len := Length(num);
+dbms_output.Put_line('Entered Number is: '
+||num);
+FOR i IN 1..len LOOP
+c := Substr(num, i, 1);
+SELECT Decode(c, 0, 'Zero ',
+1, 'One ',
+2, 'Two ',
+3, 'Three ',
+4, 'Four ',
+5, 'Five ',
+6, 'Six ',
+7, 'Seven ',
+8, 'Eight ',
+9, 'Nine ')
+INTO str
+FROM dual;
+num_to_word := num_to_word
+||str;
+END LOOP;
+dbms_output.Put_line('Number to words: '
+||num_to_word);
+END;
+Output :
+Entered Number is: 123456
+Number to words: One Two Three Four Five Six
